@@ -1,0 +1,21 @@
+{
+    "name":"pdeans/toolbelt-vardumper",
+    "type":"library",
+    "description":"Extension of Symfony's VarDumper component, with a Github inspired color theme.",
+    "license":"MIT",
+    "keywords":["debugger", "vardumper", "vardump", "debug"],
+    "authors":[
+        {
+            "name":"Patrick Stearns",
+            "email":"pdeans1986@gmail.com"
+        }
+    ],
+    "require":{
+        "symfony/var-dumper": "^3.3"
+    },
+    "autoload":{
+        "psr-4":{
+            "pdeans\\Debuggers\\Vardumper\\":"src"
+        }
+    }
+}
