@@ -1,5 +1,5 @@
 {
-    "name":"pdeans/toolbelt-vardumper",
+    "name":"pdeans/debuggers-vardumper",
     "type":"library",
     "description":"Extension of Symfony's VarDumper component, with a Github inspired color theme.",
     "license":"MIT",
