@@ -11,11 +11,11 @@
         }
     ],
     "require":{
-        "symfony/var-dumper": "^3.3"
+        "symfony/var-dumper": "^4.2"
     },
     "autoload":{
         "psr-4":{
-            "pdeans\\Debuggers\\Vardumper\\":"src"
+            "pdeans\\Debuggers\\Vardumper\\":"src/"
         }
     }
 }
