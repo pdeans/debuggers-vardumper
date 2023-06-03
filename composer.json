@@ -1,21 +1,24 @@
 {
-    "name":"pdeans/debuggers-vardumper",
-    "type":"library",
-    "description":"Extension of Symfony's VarDumper component, with a Github inspired color theme.",
-    "license":"MIT",
-    "keywords":["debugger", "vardumper", "vardump", "debug"],
-    "authors":[
+    "name": "pdeans/debuggers-vardumper",
+    "type": "library",
+    "description": "Extension of Symfony's VarDumper component, with a Github inspired color theme.",
+    "license": "MIT",
+    "keywords": ["debugger", "vardumper", "vardump", "debug"],
+    "authors": [
         {
-            "name":"Patrick Stearns",
-            "email":"pdeans1986@gmail.com"
+            "name": "Patrick Stearns",
+            "email": "pdeans1986@gmail.com"
         }
     ],
     "require":{
-        "symfony/var-dumper": "^5.1"
+        "php": ">=8.1",
+        "symfony/var-dumper": "^6.3"
     },
-    "autoload":{
-        "psr-4":{
-            "pdeans\\Debuggers\\Vardumper\\":"src/"
+    "autoload": {
+        "psr-4": {
+            "pdeans\\Debuggers\\Vardumper\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
