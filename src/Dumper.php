@@ -8,7 +8,15 @@ use Symfony\Component\VarDumper\Dumper\CliDumper;
 
 class Dumper
 {
-    public function dump($value, $label = '')
+    /**
+     * Dump the given value.
+     *
+     * @param mixed $value The value to dump.
+     * @param string $label Displays the provided label above the dumped value.
+     * @param bool $showOutputSource Include the output source display with the dumped value.
+     * @return void
+     */
+    public function dump(mixed $value, string $label = '', bool $showOutputSource = true): void
     {
         $is_cli = in_array(PHP_SAPI, ['cli', 'phpdbg'], true) ? true : false;
 
@@ -25,7 +33,7 @@ class Dumper
 
             $dumper = ($is_cli ? new CliDumper() : new HtmlDumper());
 
-            if ($dumper instanceof HtmlDumper) {
+            if ($showOutputSource && $dumper instanceof HtmlDumper) {
                 $dumper->dumpWithSource($data);
             } else {
                 $dumper->dump($data);
