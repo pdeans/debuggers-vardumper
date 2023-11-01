@@ -18,10 +18,10 @@ class Dumper
      */
     public function dump(mixed $value, string $label = '', bool $showOutputSource = true): void
     {
-        $is_cli = in_array(PHP_SAPI, ['cli', 'phpdbg'], true) ? true : false;
+        $is_cli = in_array(PHP_SAPI, ['cli', 'phpdbg'], true);
 
         if ($label !== '') {
-            echo $label, ($is_cli ? PHP_EOL : '<br>');
+            echo $label, $is_cli ? PHP_EOL : '<br>';
         }
 
         if (class_exists(CliDumper::class)) {
@@ -31,7 +31,7 @@ class Dumper
 
             $data = $cloner->cloneVar($value);
 
-            $dumper = ($is_cli ? new CliDumper() : new HtmlDumper());
+            $dumper = $is_cli ? new CliDumper() : new HtmlDumper();
 
             if ($showOutputSource && $dumper instanceof HtmlDumper) {
                 $dumper->dumpWithSource($data);
