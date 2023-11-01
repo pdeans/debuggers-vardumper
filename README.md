@@ -24,6 +24,9 @@ $dumper->dump($arr);
 
 // With label
 $dumper->dump($arr, 'array values');
+
+// With label and suppress the source output information (file:line number)
+$dumper->dump($arr, 'array values', false);
 ```
 
 
